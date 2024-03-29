@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jenga</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <a href="{% url 'index' %}">
+          <img src="{% static 'images/logo.png' %}" alt="Logo" />
+        </a>
+      </div>
+      <div class="navbar-menu">
+        <ul>
+          <li><a href="{% url 'contracts' %}">Contracts</a></li>
+          <li><a href="{% url 'contractors' %}">Contractors</a></li>
+          <li><a href="{% url 'buy-supplies' %}">Buy Supplies</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+      </div>
+      <div class="navbar-user">
+        {% if user.is_authenticated %}
+        <div class="user-profile">
+          <img src="{{ user.profile_picture.url }}" alt="Profile Picture" />
+          <div class="dropdown-content">
+            <a href="{% url 'profile' %}">Profile</a>
+            <a href="{% url 'logout' %}">Logout</a>
+          </div>
+        </div>
+        {% else %}
+        <a href="{% url 'login' %}" class="login-btn">Login</a>
+        {% endif %}
+      </div>
+    </nav>
+
+    {% block content %} {% endblock content %}
+  </body>
+</html>
