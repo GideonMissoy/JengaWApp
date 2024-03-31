@@ -17,25 +17,25 @@ def homeIndex(request):
 #     return render(request, 'base/login.html')
 
 class HomeTemplate(TemplateView):
-    template_name = 'index.html'
+    template_name = 'base/index.html'
 
 class AboutTemplate(TemplateView):
-    template_name = 'about.html'
+    template_name = 'base/about.html'
 
 class SuppliesTemplate(TemplateView):
-    template_name = 'buy_supplies.html'
+    template_name = 'base/buy_supplies.html'
 
 class ContactTemplate(TemplateView):
-    template_name = 'contact.html'
+    template_name = 'base/contact.html'
 
 class ListingsTemplate(TemplateView):
-    template_name = 'contracts.html'
+    template_name = 'base/contracts.html'
 
 class ContractorsTemplate(TemplateView):
-    template_name = 'contractors.html'
+    template_name = 'base/contractors.html'
 
 class LogTemplate(TemplateView):
-    template_name = 'login.html'
+    template_name = 'base/login.html'
 
 class ProfileTemplate(TemplateView):
-    template_name = 'profile.html'
+    template_name = 'base/profile.html'
