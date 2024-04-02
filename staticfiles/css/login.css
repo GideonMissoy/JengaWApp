@@ -10,27 +10,9 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url(background.jpg) no-repeat;
+  background: url(images/background.jpg) no-repeat;
   background-size: cover;
   background-position: center;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px, 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 99;
-}
-
-.logo {
-  font-size: 2em;
-  color: #fff;
-  user-select: none;
 }
 
 .navigation a {

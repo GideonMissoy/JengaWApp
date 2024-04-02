@@ -1,0 +1,81 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.navbar-logo img {
+  height: 50px;
+  width: auto;
+}
+
+.navbar-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar-menu ul li {
+  margin-right: 20px;
+}
+
+.navbar-menu ul li:last-child {
+  margin-right: 0;
+}
+
+.navbar-menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu ul li a:hover {
+  color: #f00;
+}
+
+.navbar-user .user-profile {
+  position: relative;
+}
+
+.navbar-user .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 100px;
+  z-index: 1;
+}
+
+.navbar-user .dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-user .dropdown-content a:hover {
+  background-color: #555;
+}
+
+.navbar-user:hover .dropdown-content {
+  display: block;
+}
+
+/* Login Button Style */
+.loginBtn {
+  padding: 10px 20px;
+  background-color: #f00;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.loginBtn:hover {
+  background-color: #d00;
+}
