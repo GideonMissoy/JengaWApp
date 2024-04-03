@@ -17,19 +17,19 @@ class LoginView(View):
         return render(request, self.template_name)
     
     def post(self, request):
-        if 'login_form' in request.POST:
-            username = request.POST.get('username')
-            password = request.POST.get('password')
-            user = authenticate(request, username=username, password=password)
+        if 'login_email' in request.POST and 'login_password' in request.POST:
+            email = request.POST.get('login_email')
+            password = request.POST.get('login_password')
+            user = authenticate(request, email=email, password=password)
             if user is not None:
                 login(request, user)
                 return redirect('index')
             else:
-                return render(request, self.template_name, {'error_message': 'Invalid username or password'})
+                return render(request, self.template_name, {'error_message': 'Invalid email or password'})
         
-        elif 'register_form' in request.POST:
+        elif 'reg_username' in request.POST and 'reg_email' in request.POST and 'reg_password' in request.POST:
             username = request.POST.get('reg_username')
-            email = request.POST.get('email')
+            email = request.POST.get('reg_email')
             password = request.POST.get('reg_password')
             if User.objects.filter(username=username).exists() or User.objects.filter(email=email).exists():
                 return render(request, self.template_name, {'error_message': 'Username or email already exists. Please enter a different one.'})

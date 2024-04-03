@@ -1,4 +1,4 @@
-{% extends 'base/main.html' %} {% load static %} {% block content %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,20 +15,20 @@
 
       <div class="form-box login">
         <h2>Login</h2>
-        <form action="#">
+        <form method="post">
           {% csrf_token %}
           <div class="input-box">
             <span class="icon">
               <ion-icon name="mail"></ion-icon>
             </span>
-            <input type="email" required />
+            <input type="email" name="login_email" required />
             <label>Email</label>
           </div>
           <div class="input-box">
             <span class="lock-closed">
               <ion-icon name="lock-closed"></ion-icon>
             </span>
-            <input type="password" required />
+            <input type="password" name="login_password" required />
             <label>Password</label>
           </div>
           <div class="remember-forgot">
@@ -53,26 +53,26 @@
             <span class="icon">
               <ion-icon name="person"></ion-icon>
             </span>
-            <input type="text" required />
+            <input type="text" name="reg_username" required />
             <label>Username</label>
           </div>
           <div class="input-box">
             <span class="icon">
               <ion-icon name="mail"></ion-icon>
             </span>
-            <input type="email" required />
+            <input type="email" name="reg_email"" required />
             <label>Email</label>
           </div>
           <div class="input-box">
             <span class="lock-closed">
               <ion-icon name="lock-closed"></ion-icon>
             </span>
-            <input type="password" required />
+            <input type="password" name="reg_password" required />
             <label>Password</label>
           </div>
           <div class="remember-forgot">
-            <label
-              ><input type="checkbox" /> I agree to the Terms and
+            <label>
+              <input type="checkbox" /> I agree to the Terms and
               Conditions.</label
             >
           </div>
@@ -97,4 +97,3 @@
     ></script>
   </body>
 </html>
-{% endblock content %}
