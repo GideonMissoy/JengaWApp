@@ -7,8 +7,9 @@ from django.views import View
 from django.urls import reverse_lazy
 from .models import Project
 
-from django.contrib.auth import authenticate, login
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.views import LoginView
+from 
 
 class LoginView(View):
     template_name = 'base/login.html'
