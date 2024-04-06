@@ -9,9 +9,9 @@
     {% extends 'base/main.html' %} {% block content %}
     <h1>Projects</h1>
     <a href="{% url 'project' %}">Create</a>
-    <tr>
-      <td>{{ project.title }}</td>
-    </tr>
+    {% for project in projects %}
+    <li>{{ project.title }}</li>
+    {% endfor %}
     {% endblock content %}
   </body>
 </html>

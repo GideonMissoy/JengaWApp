@@ -43,11 +43,12 @@ class ListingsTemplate(ListView):
 class ProjectDetail(DetailView):
     model = Project
     context_object_name = 'project'
-    template_name = 'base/project'
+    template_name = 'base/project.html'
 
 class CreateProject(CreateView):
     model = Project
     fields = '__all__'
+    template_name = 'base/project_form.html'
     success_url = reverse_lazy('projects')
 
     def form_valid(self, form):
