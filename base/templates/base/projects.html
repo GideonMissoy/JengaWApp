@@ -7,7 +7,11 @@
   </head>
   <body>
     {% extends 'base/main.html' %} {% block content %}
-    <h1>Contracts</h1>
+    <h1>Projects</h1>
+    <a href="{% url 'project' %}">Create</a>
+    <tr>
+      <td>{{ project.title }}</td>
+    </tr>
     {% endblock content %}
   </body>
 </html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <div class="form-box register">
+        <h2>Sign Up</h2>
+        <form method="POST">
+          {% csrf_token %}
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="person"></ion-icon>
+            </span>
+            <input type="text" name="reg_username" required />
+            <label>Username</label>
+          </div>
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="mail"></ion-icon>
+            </span>
+            <input type="email" name="reg_email"" required />
+            <label>Email</label>
+          </div>
+          <div class="input-box">
+            <span class="lock-closed">
+              <ion-icon name="lock-closed"></ion-icon>
+            </span>
+            <input type="password" name="reg_password" required />
+            <label>Password</label>
+          </div>
+          <div class="remember-forgot">
+            <label>
+              <input type="checkbox" /> I agree to the Terms and
+              Conditions.</label
+            >
+          </div>
+          <button class="btn" type="submit">Register</button>
+          <div class="login-register">
+            <p>
+              Already have an account? <a href="{% url 'login' %}">Login</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+</body>
+</html>

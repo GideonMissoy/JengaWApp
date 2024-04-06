@@ -1,63 +1,70 @@
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from django.http import HttpRequest, HttpResponse
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, FormView
 from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views import View
 from django.urls import reverse_lazy
+
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.views import LoginView
+from django.contrib.auth import login
 from .models import Project
 
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.contrib.auth.views import LoginView
-from 
-
-class LoginView(View):
+class CustomLogin(LoginView):
     template_name = 'base/login.html'
+    fields = '__all__'
+    redirect_authenticated_user = True
 
-    def get(self, request):
-        return render(request, self.template_name)
-    
-    def post(self, request):
-        if 'login_email' in request.POST and 'login_password' in request.POST:
-            email = request.POST.get('login_email')
-            password = request.POST.get('login_password')
-            user = authenticate(request, email=email, password=password)
-            if user is not None:
-                login(request, user)
-                return redirect('index')
-            else:
-                return render(request, self.template_name, {'error_message': 'Invalid email or password'})
-        
-        elif 'reg_username' in request.POST and 'reg_email' in request.POST and 'reg_password' in request.POST:
-            username = request.POST.get('reg_username')
-            email = request.POST.get('reg_email')
-            password = request.POST.get('reg_password')
-            if User.objects.filter(username=username).exists() or User.objects.filter(email=email).exists():
-                return render(request, self.template_name, {'error_message': 'Username or email already exists. Please enter a different one.'})
-            else:
-                new_user = User.objects.create_user(username=username, email=email, password=password)
-                login(request, new_user)
-                return redirect('index')
-        else:
-            return render(request, self.template_name)
+    def get_success_url(self):
+        return reverse_lazy('index')
 
+class RegisterPage(FormView):
+    template_name = 'base/register.html'
+    form_class = UserCreationForm
+    redirect_authenticated_user = True
+    success_url = reverse_lazy('index')
+
+    def form_valid(self, form):
+        user =form.save()
+        if user is not None:
+            login(self.request, user)
+        return super(RegisterPage, self).form_valid(form)
 class HomeTemplate(TemplateView):
     template_name = 'base/index.html'
 
-class AboutTemplate(TemplateView):
-    template_name = 'base/about.html'
+class ListingsTemplate(ListView):
+    model = Project
+    context_object_name = 'projects'
+    template_name = 'base/projects.html'
+
+class ProjectDetail(DetailView):
+    model = Project
+    context_object_name = 'project'
+    template_name = 'base/project'
+
+class CreateProject(CreateView):
+    model = Project
+    fields = '__all__'
+    success_url = reverse_lazy('projects')
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super(CreateProject, self).form_valid (form)
+
+class ContractorsTemplate(TemplateView):
+    template_name = 'base/contractors.html'
 
 class SuppliesTemplate(TemplateView):
     template_name = 'base/buy_supplies.html'
 
+class AboutTemplate(TemplateView):
+    template_name = 'base/about.html'
+
 class ContactTemplate(TemplateView):
     template_name = 'base/contact.html'
-
-class ListingsTemplate(ListView):
-    template_name = 'base/contracts.html'
-
-class ContractorsTemplate(TemplateView):
-    template_name = 'base/contractors.html'
 
 class ProfileTemplate(TemplateView):
     template_name = 'base/profile.html'
