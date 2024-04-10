@@ -8,9 +8,11 @@
   <body>
     {% extends 'base/main.html' %} {% block content %}
     <h1>Projects</h1>
-    <a href="{% url 'project' %}">Create</a>
+    <a href="{% url 'project' %}">Create</a></br>
     {% for project in projects %}
-    <li>{{ project.title }}</li>
+    <small>{{ project.created_at.date }} | {{ project.location }} </small>
+    <li>{{ project.title }} </br> {{ project.description | slice:":50" }}...</li>
+
     {% endfor %}
     {% endblock content %}
   </body>
