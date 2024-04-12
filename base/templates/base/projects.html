@@ -1,17 +1,28 @@
+{% extends 'base/main.html' %} {% block content %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/projects.css' %}" />  
   </head>
   <body>
-    {% extends 'base/main.html' %} {% block content %}
-    <h1>Projects</h1>
+    <div class="proj-nav">
+        <div class="proj-title">
+            Available Projects
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+        <button class="filter-button" onclick="filterProjects()">Filter Projects</button>
+    </div>
     <a href="{% url 'project' %}">Create</a></br>
     {% for project in projects %}
     <small>{{ project.created_at.date }} | {{ project.location }} </small>
-    <li>{{ project.title }} </br> {{ project.description | slice:":50" }}...</li>
+    <li>{{ project.title }} </br> 
+    {{ project.description | slice:":50" }}...</li>
 
     {% endfor %}
     {% endblock content %}
