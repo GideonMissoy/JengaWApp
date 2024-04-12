@@ -1,0 +1,41 @@
+{% extends 'base/main.html' %} {% block content %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/form.css' %}" />
+  </head>
+  <body>
+    <h3>Add a new Project</h3>
+    <a href="{% url 'projects' %}">Discard Changes</a>
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="form-group">
+        <div>
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" required />
+        </div>
+        <div>
+          <label for="budget">Budget:</label>
+          <input type="number" id="budget" name="budget" required />
+        </div>
+        <div>
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" />
+        </div>
+        <div>
+          <label for="description">Description:</label>
+          <textarea id="description" name="description" required></textarea>
+        </div>
+        <div>
+          <label for="image">Image:</label>
+          <input type="file" id="image" name="image" accept="image/*" />
+        </div>
+        <input type="submit" value="Submit" />
+      </div>
+    </form>
+  </body>
+</html>
+{% endblock content %}
