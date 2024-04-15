@@ -11,7 +11,7 @@ from django.urls import reverse_lazy
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.views import LoginView
 from django.contrib.auth import login
-from .models import Project
+from .models import Project, Bid
 
 class CustomLogin(LoginView):
     template_name = 'base/login.html'
@@ -45,11 +45,6 @@ class ProjectDetail(DetailView):
     context_object_name = 'project'
     template_name = 'base/project_detail.html'
 
-class ProjectBid(DetailView):
-    model = Project
-    context_object_name = 'project'
-    template_name = 'base/project_bid.html'
-
 class CreateProject(CreateView):
     model = Project
     fields = '__all__'
@@ -59,6 +54,12 @@ class CreateProject(CreateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super(CreateProject, self).form_valid (form)
+
+class ProjectBid(DetailView):
+    model = Bid
+    fields = '__all__'
+    context_object_name = 'project'
+    template_name = 'base/project_bid.html'
 
 class ContractorsTemplate(TemplateView):
     template_name = 'base/contractors.html'
