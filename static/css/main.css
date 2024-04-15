@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
-  color: #fff;
+  color: black;
   padding: 10px 20px;
 }
 
@@ -29,7 +29,7 @@
 
 .navbar-menu ul li a {
   text-decoration: none;
-  color: #fff;
+  color: black;
   transition: color 0.3s ease;
 }
 
