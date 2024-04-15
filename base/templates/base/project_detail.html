@@ -1,0 +1,28 @@
+{% extends 'base/main.html' %}
+{% block content %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ project.title }}</title>
+    <link rel="stylesheet" href="{% static 'css/project_detail.css' %}" />
+</head>
+<body>
+    <div class="project-details">
+        <small> Created at: {{ project.created_at }}  |  Status: {{ project.status }}  |  Location: {{ project.location }} </small>
+        <h1>{{ project.title }}</h1>
+        <p> The estimated budget for this project is: {{ project.budget }}</p>
+        <p><strong>Description:</strong> {{ project.description }}</p>
+        <p><strong>Last updated:</strong> {{ project.updated_at }}</p>
+
+        <form action="{% url 'project_bid' project.pk %}" method="post">
+            {% csrf_token %}
+            <button type="submit">Bid for Project</button>
+        </form>
+    </div>
+</body>
+</html>
+{% endblock %}

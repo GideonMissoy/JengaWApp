@@ -43,7 +43,12 @@ class ListingsTemplate(ListView):
 class ProjectDetail(DetailView):
     model = Project
     context_object_name = 'project'
-    template_name = 'base/project.html'
+    template_name = 'base/project_detail.html'
+
+class ProjectBid(DetailView):
+    model = Project
+    context_object_name = 'project'
+    template_name = 'base/project_bid.html'
 
 class CreateProject(CreateView):
     model = Project
