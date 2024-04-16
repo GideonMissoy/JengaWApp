@@ -1,37 +1,40 @@
+{% extends 'base/main.html' %} {% block content %} {% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    {% extends 'base/main.html' %} {% block content %}
     <section class="landing">
-      <h2>
-        <b>Jenga</b>
-        <br />
-        Where construction dreams meet reality! Whether you're a homeowner
-        embarking on a renovation project or a contractor seeking exciting
-        opportunities, our platform is your one-stop destination.
-      </h2>
-      <img src="./Images/image1.jpg" alt="" />
-    </section>
-    <section class="about_us">
-      <div>
-        <h3>About Us</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-          excepturi ratione ipsa reiciendis dolorem illo optio praesentium
-          commodi rem nam temporibus itaque sit tempore aspernatur porro vitae
-          eos numquam cupiditate, ut, dignissimos consequatur laboriosam sunt?
-          Quis non recusandae odit voluptate accusamus quasi animi. Alias
-          laudantium beatae ullam incidunt dicta laborum architecto, magnam fuga
-          quibusdam non?
-        </p>
-        <a href="#">About Us</a>
+      <div class="landing-content">
+        <h2>
+          <b>Jenga</b><br />
+          Where construction dreams meet reality! Whether you're a homeowner
+          embarking on a renovation project or a contractor seeking exciting
+          opportunities, our platform is your one-stop destination.
+        </h2>
       </div>
-      <img src="./Images/image2.jpg" alt="Photo" />
+    </section>
+    <section class="description">
+      <div class="description-text">
+        <h3>How do you hire the Best?</h3>
+        <p>
+          Forget the old ways, Forget getting referred. You can have the best
+          contractors. Right here. Right now!
+        </p>
+      </div>
+      <div class="description-img">
+        <img src="{% static 'images/jenga4.jpg' %}" alt="Photo" />
+      </div>
     </section>
     <section class="services">
       <h3>Available Contracts</h3>

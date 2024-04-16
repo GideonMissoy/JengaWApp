@@ -1,0 +1,46 @@
+.landing {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-image: url("{% static '/images/jenga2.jpg' %}");
+  background-size: cover;
+  background-position: center;
+  width: 85%;
+  margin: auto;
+  /* height: 70vh; */
+  text-align: center;
+  color: black;
+}
+
+.landing-content {
+  max-width: 600px;
+  margin: auto;
+  background-color: #cfcfcf;
+  padding: 15px 15px 15px 15px;
+  border-radius: 3rem;
+}
+
+.description {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  overflow: hidden;
+  padding-top: 5rem;
+}
+
+/* .description-text .description-img {
+  flex: 1;
+}
+
+.description-text {
+  padding-top: 10px;
+}
+
+.description-text h2 {
+  text-align: center;
+}
+
+.description-img {
+  max-width: 35%;
+  height: auto;
+  float: right;
+} */

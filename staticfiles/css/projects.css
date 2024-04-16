@@ -1,0 +1,47 @@
+.proj-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: black;
+  padding: 5px 15px;
+}
+
+.search-bar {
+  flex: 1;
+  margin: 0 20px;
+  padding: 5px;
+}
+
+.filter-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+.project-container {
+  width: 60%;
+  margin: auto;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.projectDetails {
+  display: flex;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.project img {
+  width: 150px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.project-description {
+  flex: 1;
+}

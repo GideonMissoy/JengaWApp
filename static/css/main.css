@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
+  background-color: hwb(0 100% 0%);
   color: black;
   padding: 10px 20px;
 }
@@ -21,6 +21,8 @@
 
 .navbar-menu ul li {
   margin-right: 20px;
+  padding: 5px 5px;
+  border-radius: 1.5rem;
 }
 
 .navbar-menu ul li:last-child {
@@ -34,7 +36,10 @@
 }
 
 .navbar-menu ul li a:hover {
-  color: #f00;
+  color: rgb(50, 155, 9);
+  background-color: hsl(0, 7%, 86%);
+  padding: 5px;
+  border: 1.5rem;
 }
 
 .navbar-user .user-profile {
@@ -68,7 +73,7 @@
 /* Login Button Style */
 .loginBtn {
   padding: 10px 20px;
-  background-color: #f00;
+  background-color: rgb(63, 247, 56);
   color: #fff;
   border: none;
   border-radius: 5px;
