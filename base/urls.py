@@ -14,7 +14,6 @@ urlpatterns = [
     path('projects/', ListingsTemplate.as_view(), name='projects'),
     path('project/', CreateProject.as_view(), name='project'),
     path('project/<int:pk>/', ProjectDetail.as_view(), name='project_detail'),
-    # path('project/<int:pk>/bid/', ProjectBid.as_view(), name='project_bid'),
     path('project/<int:pk>/bid/', ProjectBid.as_view(), name='project_bid'),
     path('contractors/', ContractorsTemplate.as_view(), name='contractors'),
 ]
