@@ -31,4 +31,4 @@ class Bid(models.Model):
     bid_time = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"Bid for {self.job_listing.title} by {self.bidder.username}"
+        return f"Bid for {self.project.title} by {self.bidder.username}"

@@ -1,3 +1,9 @@
+body {
+  width: 96%;
+  margin: auto;
+  background-color: white;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -5,6 +11,8 @@
   background-color: hwb(0 100% 0%);
   color: black;
   padding: 10px 20px;
+  width: 95%;
+  margin: auto;
 }
 
 .navbar-logo img {

@@ -55,10 +55,16 @@ class CreateProject(CreateView):
         form.instance.user = self.request.user
         return super(CreateProject, self).form_valid (form)
 
+
+class BidsTemplate(ListView):
+    model = Bid
+    context_object_name = 'bids'
+    template_name = 'base/bids.html'
+
 class ProjectBid(DetailView):
     model = Bid
     fields = '__all__'
-    context_object_name = 'project'
+    context_object_name = 'bid'
     template_name = 'base/project_bid.html'
 
 class ContractorsTemplate(TemplateView):
