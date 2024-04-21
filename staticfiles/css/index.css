@@ -1,23 +1,8 @@
 .landing {
-  padding-top: 150px;
-  padding-bottom: 150px;
-  background-image: url("./images/jenga2.jpg");
-  background-size: cover;
-  background-position: center;
-  width: 85%;
-  margin: auto;
-  /* height: 70vh; */
-  text-align: center;
-  color: black;
-  margin-bottom: 3.5rem;
 }
 
 .landing-content {
-  max-width: 600px;
-  margin: auto;
-  background-color: #cfcfcf;
-  padding: 15px 15px 15px 15px;
-  border-radius: 3rem;
+  background-image: url("../images/jenga2.jpg");
 }
 
 .row {
@@ -79,18 +64,30 @@
 }
 
 .detailed-descrip {
-  width: 90%;
+  /* width: 80%; */
   margin: auto;
-  background-color: black;
-  color: white;
-  border-radius: 2rem;
+  background-color: rgb(247, 247, 247);
+  color: black;
+  padding: 15px;
+  border-radius: 1.5rem;
 }
 
-.detailed-descrip span.header-descrip {
-  padding-top: 2.5rem;
-  font-size: 55px;
-  font-weight: 600;
+.header-descrip {
+  width: 60%;
+  margin: auto;
+  margin-top: 0;
+  font-size: 45px;
   text-align: center;
-  align-items: center;
-  color: white;
+}
+
+.parag {
+  width: 81%;
+  margin: auto;
+  margin-bottom: 15px;
+  font-family: Open Sans, Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 155px;
+  background-color: white;
+  padding: 12px 25px;
+  border-radius: 1rem;
 }

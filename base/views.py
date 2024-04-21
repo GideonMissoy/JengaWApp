@@ -26,12 +26,15 @@ class RegisterPage(FormView):
     form_class = UserCreationForm
     redirect_authenticated_user = True
     success_url = reverse_lazy('index')
+    print("Some text to confirm.", form_class)
 
     def form_valid(self, form):
         user =form.save()
+        print('This is a new user: ', user)
         if user is not None:
             login(self.request, user)
         return super(RegisterPage, self).form_valid(form)
+    
 class HomeTemplate(TemplateView):
     template_name = 'base/index.html'
 

@@ -11,7 +11,7 @@
   <body>
     <div class="bid-form-container">
       <h1>Bid for Project</h1>
-      <form action="{% url 'submit_bid' project.id %}" method="post">
+      <form method="post" action="">
         {% csrf_token %} {{ form.as_p}}
         <button type="submit">Submit Bid</button>
       </form>
