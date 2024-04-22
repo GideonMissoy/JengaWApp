@@ -24,6 +24,25 @@
         <!-- <a href="{% url 'project_bid' project.pk %}">Bid for Project</a> -->
         <a href="{% url 'project_bid' project.pk %}">Project Bid</a>
       </form>
+
+      {% if user.is_authenticated and is_owner %}
+      <div class="bids-section">
+        <h2>Bids for this Project</h2>
+        {% if bids %}
+        <ul>
+          {% for bid in bids %}
+          <li>
+            <strong>{{ bid.bidder.username }}</strong> bid {{ bid.bid_amount }}
+            on {{ bid.bid_time }}
+            <p>Proposal: {{ bid.proposal }}</p>
+          </li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <p>No bids have been placed for this project yet.</p>
+        {% endif %}
+      </div>
+      {% endif %}
     </div>
   </body>
 </html>

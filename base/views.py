@@ -1,17 +1,18 @@
-from django.contrib.auth.models import User
-from django.shortcuts import render, redirect
-from django.http import HttpRequest, HttpResponse
-from django.views.generic import TemplateView, FormView
-from django.views.generic.list import ListView
-from django.views.generic.detail import DetailView
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from django.views import View
-from django.urls import reverse_lazy
-
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.views import LoginView
 from django.contrib.auth import login
-from .models import Project, Bid
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
+from django.contrib.auth.views import LoginView
+from django.http import HttpRequest, HttpResponse
+from django.shortcuts import redirect, render
+from django.urls import reverse_lazy
+from django.views import View
+from django.views.generic import FormView, TemplateView
+from django.views.generic.detail import DetailView
+from django.views.generic.edit import CreateView, DeleteView, UpdateView
+from django.views.generic.list import ListView
+
+from .models import Bid, Project
+
 
 class CustomLogin(LoginView):
     template_name = 'base/login.html'
@@ -48,6 +49,12 @@ class ProjectDetail(DetailView):
     context_object_name = 'project'
     template_name = 'base/project_detail.html'
 
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['bids'] = Bid.objects.filter(project_id=self.kwargs['pk'])
+        return context
+
 class CreateProject(CreateView):
     model = Project
     fields = '__all__'
@@ -64,11 +71,19 @@ class BidsTemplate(ListView):
     context_object_name = 'bids'
     template_name = 'base/bids.html'
 
-class ProjectBid(DetailView):
+class ProjectBid(CreateView):
     model = Bid
     fields = '__all__'
     context_object_name = 'bid'
     template_name = 'base/project_bid.html'
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        form.instance.project_id = self.kwargs['pk']
+        return super(ProjectBid, self).form_valid(form)
+    
+    def get_success_url(self):
+        return reverse_lazy('project_detail', kwargs={'pk': self.kwargs['pk']})
 
 class ContractorsTemplate(TemplateView):
     template_name = 'base/contractors.html'
