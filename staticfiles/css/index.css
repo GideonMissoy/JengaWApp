@@ -1,11 +1,44 @@
 .landing {
+  background-image: url("https://plus.unsplash.com/premium_photo-1661331702391-61c41bdb1313?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: auto;
+  border-radius: 3rem;
 }
 
 .landing-content {
-  background-image: url("../images/jenga2.jpg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  max-width: 40%;
+  margin: auto;
+  background-color: rgb(0, 0, 0, 0.5);
+  border-radius: 1.5rem;
+  padding: 10px 20px;
+}
+
+.content-h2 {
+  color: white;
+  font-weight: bold;
+}
+
+.landing-content p {
+  color: white;
 }
 
 .row {
+  padding: 40px 0;
+}
+
+.row-div {
   width: 90%;
   margin: auto;
   display: grid;
@@ -14,7 +47,6 @@
   overflow-x: hidden;
   background-color: rgba(214, 214, 214, 0.979);
   border-radius: 2.5rem;
-  margin-bottom: 3.5rem;
 }
 
 .row .imageWrapper {
@@ -90,4 +122,8 @@
   background-color: white;
   padding: 12px 25px;
   border-radius: 1rem;
+}
+
+.choose {
+  flex-flow: row;
 }
