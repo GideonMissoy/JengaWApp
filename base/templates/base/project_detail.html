@@ -10,14 +10,15 @@
   </head>
   <body>
     <div class="project-details">
-      <small>
-        Created at: {{ project.created_at }} | Status: {{ project.status }} |
-        Location: {{ project.location }}
+      <small class="proj-small">
+        <li>Posted at: {{ project.created_at }}</li>
+        <li>Location: {{ project.location }}</li>
+        <li>Status: {{ project.status }}</li>
       </small>
       <h1>{{ project.title }}</h1>
-      <p>The estimated budget for this project is: {{ project.budget }}</p>
-      <p><strong>Description:</strong> {{ project.description }}</p>
-      <p><strong>Last updated:</strong> {{ project.updated_at }}</p>
+      <hr width="65%" />
+      <p>Estimated budget: {{ project.budget }}</p>
+      <p>{{ project.description }}</p>
 
       <form method="post">
         {% csrf_token %}

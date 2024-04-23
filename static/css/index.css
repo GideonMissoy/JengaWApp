@@ -36,6 +36,17 @@
   color: white;
 }
 
+.construct-background {
+  width: 75%;
+  margin: auto;
+  display: flex;
+}
+
+.construct-background h2 {
+  justify-content: center;
+  text-align: center;
+}
+
 .row {
   padding: 40px 0;
 }
