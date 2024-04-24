@@ -9,8 +9,9 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: hwb(0 100% 0%);
+  border-radius: 5%;
   color: black;
-  padding: 10px 20px;
+  padding: 10px 30px;
   width: 95%;
   margin: auto;
 }
@@ -81,7 +82,7 @@ body {
 /* Login Button Style */
 .loginBtn {
   padding: 10px 20px;
-  background-color: rgb(63, 247, 56);
+  background-color: rgb(50, 255, 43);
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -90,5 +91,5 @@ body {
 }
 
 .loginBtn:hover {
-  background-color: #d00;
+  background-color: green;
 }

@@ -1,0 +1,30 @@
+body {
+  width: 90%;
+  margin: auto;
+}
+
+.project-details {
+  background-color: rgb(224, 240, 255);
+  padding: 35px 35px;
+  border-radius: 1.5rem;
+  width: 75%;
+  margin: auto;
+}
+
+.proj-small {
+  font-weight: bold;
+  display: flex;
+}
+
+.proj-small li {
+  flex-direction: row;
+  list-style-type: none;
+  padding: 7px 12px;
+  background-color: rgb(218, 218, 218);
+  border-radius: 1.5rem;
+  margin-left: 1%;
+}
+
+.project-details h1 {
+  margin-left: 3%;
+}
