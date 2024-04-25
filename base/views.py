@@ -49,7 +49,6 @@ class ProjectDetail(DetailView):
     context_object_name = 'project'
     template_name = 'base/project_detail.html'
 
-
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['bids'] = Bid.objects.filter(project_id=self.kwargs['pk'])

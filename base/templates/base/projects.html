@@ -10,14 +10,14 @@
   <body>
     <div class="proj-nav">
       <div class="proj-title">Available Projects</div>
-      <div class="search-bar">
-        <input type="text" placeholder="Search..." />
+      <div class="search-filter">
+        <div class="search-bar">
+          <input type="text" placeholder="Search..." />
+        </div>
+        <button class="filter-button" onclick="filterProjects()">Filter Projects</button>
       </div>
-      <button class="filter-button" onclick="filterProjects()">
-        Filter Projects
-      </button>
     </div>
-    <a href="{% url 'project' %}">Create new Project</a></br>
+    <div class="create-link"><a href="{% url 'project' %}">Create new Project</a></br></div>
     <div class="project-container">
       {% for project in projects %}
       <a href="{% url 'project_detail' project.pk %}">
@@ -35,9 +35,10 @@
             <h3>{{ project.title }}</h3>
             <p>{{ project.description }}</p>
           </div>
+          {% endif %}
         </div>
       </a>
-        {% endif %}
+      <hr width="75%">
       {% endfor %}
     </div>
     {% endblock content %}
