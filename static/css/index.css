@@ -1,23 +1,94 @@
 .landing {
-  background-image: url("https://plus.unsplash.com/premium_photo-1683121484062-ca19568b0b79?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  margin-top: 0%;
+  width: 95%;
+  margin: auto;
+  border-radius: 2rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://plus.unsplash.com/premium_photo-1683121484062-ca19568b0b79?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
   background-position: center;
-  height: 80vh;
+  height: 87vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 90%;
-  margin: auto;
-  border-radius: 3rem;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.nav-landing {
+  margin-top: 2%;
+  width: 92%;
+  margin-left: 4%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: flex-start;
+  color: white;
+}
+
+.nav-logo a {
+  text-decoration: none;
+  color: green;
+  font-family: "Protest Revolution", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  font-style: normal;
+  padding: 5px 14px;
+  background-color: rgba(48, 47, 47, 0.548);
+  border-radius: 1.5rem;
+}
+
+.nav-logo a:hover {
+  padding: 7px 16px;
+  background-color: rgba(34, 34, 34, 0.397);
+}
+
+.nav-pages ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-pages ul li {
+  margin-right: 20px;
+  padding: 5px 14px;
+  border-radius: 1.2rem;
+  background-color: rgba(48, 47, 47, 0.548);
+}
+
+.nav-pages ul li:hover {
+  padding: 7px 17px;
+  background-color: rgba(34, 34, 34, 0.397);
+}
+
+.navbar-menu ul li:last-child {
+  margin-right: 0;
+}
+
+.get-started a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 1.2rem;
+  background-color: rgba(48, 47, 47, 0.548);
+  font-size: 23px;
+  font-weight: 550;
+}
+
+.get-started a:hover {
+  cursor: pointer;
+  padding: 7px 17px;
+  border-radius: 1.2rem;
+  background-color: rgba(34, 34, 34, 0.568);
 }
 
 .landing-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  align-content: flex-start;
   justify-content: center;
+  text-align: center;
   max-width: 40%;
   margin: auto;
   background-color: rgb(0, 0, 0, 0.5);
@@ -25,26 +96,16 @@
   padding: 10px 20px;
 }
 
-.content-h2 {
+.landing-content h2 {
   color: white;
-  font-weight: bold;
-  font-size: 25px;
+  font-weight: 555;
+  font-size: 27px;
 }
 
 .landing-content p {
-  font-size: 325;
+  font-size: 21px;
+  font-weight: 455;
   color: white;
-}
-
-.construct-background {
-  width: 75%;
-  margin: auto;
-  display: flex;
-}
-
-.construct-background h2 {
-  justify-content: center;
-  text-align: center;
 }
 
 .row {
@@ -90,6 +151,7 @@
 .row .textWrapper span.headerText {
   margin-top: 35px;
   font-size: 65px;
+  font-weight: 625;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -115,6 +177,7 @@
   color: black;
   padding: 15px;
   border-radius: 1.5rem;
+  margin-bottom: 2%;
 }
 
 .header-descrip {
@@ -149,22 +212,26 @@
   background-image: url("https://images.unsplash.com/photo-1533378890784-b2a5b0a59d40?q=80&w=1437&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-blend-mode: multiply;
   background-size: cover;
+  margin-bottom: 2%;
 }
 
 .checklogo {
   border-radius: 1.5rem;
+  align-content: center;
   align-self: center;
 }
 
 .checklogo h1 {
   color: white;
   text-align: center;
+  font-size: 40px;
+  font-weight: 675;
 }
 
 .checklogo img {
   justify-content: center;
   width: 325px;
-  border-radius: 5%;
+  border-radius: 4.5rem;
 }
 
 .choose-us {

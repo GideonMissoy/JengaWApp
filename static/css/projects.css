@@ -69,7 +69,7 @@
 .project-container :hover {
   background-color: #e4e4e4;
   padding: 15px 15px;
-  border: 2rem;
+  border: 5%;
   cursor: pointer;
 }
 

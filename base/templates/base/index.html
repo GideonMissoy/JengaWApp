@@ -1,4 +1,4 @@
-{% extends 'base/main.html' %} {% block content %} {% load static %}
+<!-- {% extends 'base/main.html' %} {% block content %} {% load static %} -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,11 +12,30 @@
       href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <section class="landing">
+      <div class="nav-landing">
+        <div class="nav-logo">
+          <a href="{% url 'index' %}">Jenga</a>
+        </div>
+        <div class="nav-pages">
+          <ul>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Careers</li>
+          </ul>
+        </div>
+        <div class="get-started">
+          <a href="{% url 'login' %}" class="loginBtn">Login</a>
+        </div>
+      </div>
       <div class="landing-content">
-        <h2 class="content-h2">Jenga</h2>
+        <h2>Jenga</h2>
         <p>
           Where construction dreams meet reality! Whether you're a homeowner
           embarking on a renovation project or a contractor seeking exciting
@@ -150,6 +169,6 @@
         </div>
       </div>
     </section>
-    {% endblock content %}
+    <!-- {% endblock content %} -->
   </body>
 </html>
