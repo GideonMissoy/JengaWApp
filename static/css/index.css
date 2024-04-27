@@ -58,7 +58,7 @@
 
 .nav-pages ul li:hover {
   padding: 7px 17px;
-  background-color: rgba(34, 34, 34, 0.397);
+  background-color: rgba(133, 131, 131, 0.589);
 }
 
 .navbar-menu ul li:last-child {
@@ -106,6 +106,13 @@
   font-size: 21px;
   font-weight: 455;
   color: white;
+}
+
+.construct-background {
+  margin-top: 3%;
+  width: 70%;
+  margin-left: 15%;
+  text-align: center;
 }
 
 .row {
@@ -201,13 +208,13 @@
 }
 
 .choose {
-  width: 90%;
+  width: 85%;
   margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   padding: 40px 40px;
-  border-radius: 1rem;
+  border-radius: 2rem;
   background-color: rgb(115, 163, 170);
   background-image: url("https://images.unsplash.com/photo-1533378890784-b2a5b0a59d40?q=80&w=1437&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-blend-mode: multiply;
