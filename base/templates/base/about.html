@@ -1,14 +1,60 @@
+{% extends 'base/main.html' %} {% block content %} {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    {% extends 'base/main.html' %}
-    {% block content %}
-    <h1>About Us</h1>
+    <link rel="stylesheet" href="{% static 'css/about.css' %}" />
+  </head>
+  <body>
+    <div class="landing-content">
+      <h2>Jenga</h2>
+      <p>
+        Where construction dreams meet reality! Whether you're a homeowner
+        embarking on a renovation project or a contractor seeking exciting
+        opportunities, our platform is your one-stop destination.
+      </p>
+    </div>
+    <div class="more">
+      <h2>History of Jenga</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quas
+        repellat minus perspiciatis accusamus. Accusamus laudantium voluptatem
+        architecto id, asperiores doloribus voluptate repellat eaque hic laborum
+        voluptatum distinctio, repudiandae vitae ea cupiditate, excepturi
+        possimus suscipit sunt! Quam fugiat recusandae alias laborum itaque, sit
+        incidunt, expedita qui harum est dolores ab pariatur provident dolorem
+        nisi consectetur nam numquam aliquam voluptate eveniet quod consequuntur
+        necessitatibus? Quas modi sequi adipisci cumque accusantium reiciendis
+        saepe ab maiores obcaecati voluptatem?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, sed quae
+        ipsam sit eligendi mollitia qui maxime, ex placeat impedit quos fuga
+        eaque itaque. Minus unde aspernatur quia quod tempore molestias sunt
+        atque repellat delectus explicabo aliquid soluta reprehenderit, optio
+        vitae quibusdam sint neque numquam fugiat quis. Iure molestias
+        blanditiis fugiat? Modi consequuntur odit nemo fugiat totam mollitia
+        voluptatibus accusantium sunt pariatur animi, cumque maiores ducimus
+        maxime quae quibusdam obcaecati eligendi quia reiciendis distinctio
+        tempora consectetur repellendus? Consequatur omnis officiis quas eum,
+        reprehenderit perferendis eveniet.
+      </p>
+      <div class="more-check">
+        <div class="more-img">
+            <img src="{% static 'images/logo.png' %}" alt="Logo" />
+        </div>
+        <div class="more-affirm">
+          <h3>At Jenga</h3>
+          <p>
+            We aim to simplify the entire construction process by bridging the
+            gap between clients looking for construction services and
+            contractors looking for exciting construction projects to embark in.
+          </p>
+        </div>
+      </div>
+    </div>
     {% endblock content %}
-</body>
+  </body>
 </html>
