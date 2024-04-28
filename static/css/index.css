@@ -1,13 +1,11 @@
 .landing {
-  margin-top: 0%;
-  width: 95%;
-  margin: auto;
-  border-radius: 2rem;
+  width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("https://plus.unsplash.com/premium_photo-1683121484062-ca19568b0b79?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
   background-position: center;
-  height: 87vh;
+  height: 90vh;
+  border-radius: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -15,17 +13,18 @@
 }
 
 .nav-landing {
-  margin-top: 2%;
-  width: 92%;
-  margin-left: 4%;
   display: flex;
   justify-content: space-between;
   align-content: center;
   align-items: flex-start;
   color: white;
+  padding: 20px 40px;
+  border-radius: 2rem;
+  background-color: rgba(22, 22, 22, 0.425);
 }
 
 .nav-logo a {
+  margin-left: 4%;
   text-decoration: none;
   color: green;
   font-family: "Protest Revolution", sans-serif;
@@ -33,18 +32,17 @@
   font-weight: 600;
   font-style: normal;
   padding: 5px 14px;
-  background-color: rgba(48, 47, 47, 0.548);
+  background-color: rgba(48, 47, 47, 0.116);
   border-radius: 1.5rem;
 }
 
 .nav-logo a:hover {
   padding: 7px 16px;
-  background-color: rgba(34, 34, 34, 0.397);
+  background-color: rgba(133, 131, 131, 0.24);
 }
 
 .nav-pages ul {
   list-style-type: none;
-  padding: 0;
   margin: 0;
   display: flex;
 }
@@ -53,7 +51,7 @@
   margin-right: 20px;
   padding: 5px 14px;
   border-radius: 1.2rem;
-  background-color: rgba(48, 47, 47, 0.548);
+  background-color: rgba(48, 47, 47, 0.116);
 }
 
 .nav-pages ul li:hover {
@@ -66,11 +64,12 @@
 }
 
 .get-started a {
+  margin-right: 4%;
   text-decoration: none;
   color: white;
   padding: 5px 15px;
   border-radius: 1.2rem;
-  background-color: rgba(48, 47, 47, 0.548);
+  background-color: rgba(48, 47, 47, 0.116);
   font-size: 23px;
   font-weight: 550;
 }
@@ -79,7 +78,7 @@
   cursor: pointer;
   padding: 7px 17px;
   border-radius: 1.2rem;
-  background-color: rgba(34, 34, 34, 0.568);
+  background-color: rgba(133, 131, 131, 0.589);
 }
 
 .landing-content {

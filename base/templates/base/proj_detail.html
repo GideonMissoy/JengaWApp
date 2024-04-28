@@ -5,23 +5,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ project.title}}</title>
+    <title>{{ project.title }}</title>
     <link rel="stylesheet" href="{% static 'css/project_detail.css' %}" />
   </head>
   <body>
-    {% if user.is_authenticated and is_owner %}
-      <div class="project-details">
-        <small class="proj-small">
+    <div class="project-details">
+      <small class="proj-small">
         <li>Posted at: {{ project.created_at }}</li>
         <li>Location: {{ project.location }}</li>
         <li>Status: {{ project.status }}</li>
-        </small>
-        <h1>{{ project.title }}</h1>
-        <hr width="65%" />
-        <p>Estimated budget: {{ project.budget }}</p>
-        <p>{{ project.description }}</p>
-      </div>
+      </small>
+      <h1>{{ project.title }}</h1>
+      <hr width="65%" />
+      <p>Estimated budget: {{ project.budget }}</p>
+      <p>{{ project.description }}</p>
 
+      <form method="post">
+        {% csrf_token %}
+        <a href="{% url 'project_bid' project.pk %}">Place a Bid</a>
+      </form>
+
+      {% if user.is_authenticated and is_owner %}
       <div class="bids-section">
         <h2>Bids for this Project</h2>
         {% if bids %}
@@ -37,23 +41,6 @@
         {% else %}
         <p>No bids have been placed for this project yet.</p>
         {% endif %}
-      </div>
-      {% else %}
-      <div class="project-details">
-        <small class="proj-small">
-            <li>Posted at: {{ project.created_at }}</li>
-            <li>Location: {{ project.location }}</li>
-            <li>Status: {{ project.status }}</li>
-        </small>
-        <h1>{{ project.title }}</h1>
-        <hr width="65%" />
-        <small class="proj-small">Estimated budget: {{ project.budget }}</small>
-        <p>{{ project.description }}</p>
-
-        <form method="post">
-            {% csrf_token %}
-            <a href="{% url 'project_bid' project.pk %}">Place a Bid</a>
-        </form>
       </div>
       {% endif %}
     </div>

@@ -10,17 +10,17 @@
   <body>
     <nav class="navbar">
       <div class="navbar-logo">
-        <a href="{% url 'index' %}">
+        <a href="{% url 'projects' %}">
           <img src="{% static 'images/logo.png' %}" alt="Logo" />
         </a>
       </div>
       <div class="navbar-menu">
         <ul>
           <li><a href="{% url 'projects' %}">Projects</a></li>
-          <li><a href="{% url 'contractors' %}">Contractors</a></li>
-          <li><a href="{% url 'buy-supplies' %}">Supplies</a></li>
-          <li><a href="{% url 'about' %}">About</a></li>
-          <li><a href="{% url 'contact' %}">Contact</a></li>
+          <!-- <li><a href="{% url 'contractors' %}">Contractors</a></li> -->
+          <li><a href="{% url 'buy-supplies' %}">Buy Supplies</a></li>
+          <li><a href="{% url 'about' %}">About Us</a></li>
+          <li><a href="{% url 'contact' %}">Contact Us</a></li>
         </ul>
       </div>
       <div class="navbar-user">
