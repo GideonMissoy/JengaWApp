@@ -1,3 +1,8 @@
+/* body {
+  background-color: rgb(1, 1, 27);
+  color: white;
+} */
+
 .landing {
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -52,6 +57,11 @@
   padding: 5px 14px;
   border-radius: 1.2rem;
   background-color: rgba(48, 47, 47, 0.116);
+}
+
+.nav-pages ul li a {
+  text-decoration: none;
+  color: white;
 }
 
 .nav-pages ul li:hover {

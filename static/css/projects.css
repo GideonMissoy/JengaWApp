@@ -57,8 +57,9 @@
   width: 60%;
   margin: auto;
   overflow: hidden;
-  padding: 15px 15px;
-  border-radius: 2rem;
+  background-color: #e4e4e4;
+  padding: 5px 10px;
+  border-radius: 2.5rem;
 }
 
 .project-container a {
@@ -68,13 +69,14 @@
 
 .project-container :hover {
   background-color: #e4e4e4;
-  padding: 15px 15px;
+  padding: 6px 13px;
   border: 5%;
   cursor: pointer;
 }
 
 .projectDetails {
-  margin-bottom: 20px;
+  background-color: #e4e1e1;
+  margin-bottom: 12px;
   border-radius: 5px;
   padding: 10px;
 }

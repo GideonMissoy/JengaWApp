@@ -1,4 +1,4 @@
-{% extends 'base/main.html' %} {% block content %} {% load static %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,14 +8,31 @@
     <link rel="stylesheet" href="{% static 'css/about.css' %}" />
   </head>
   <body>
-    <div class="landing-content">
-      <h2>Jenga</h2>
-      <p>
-        Where construction dreams meet reality! Whether you're a homeowner
-        embarking on a renovation project or a contractor seeking exciting
-        opportunities, our platform is your one-stop destination.
-      </p>
-    </div>
+    <section class="landing">
+      <div class="nav-landing">
+        <div class="nav-logo">
+          <a href="{% url 'index' %}">Jenga</a>
+        </div>
+        <div class="nav-pages">
+          <ul>
+            <li><a href="{% url 'about' %}">About Us</a></li>
+            <li>Contact Us</li>
+            <li>Careers</li>
+          </ul>
+        </div>
+        <div class="get-started">
+          <a href="{% url 'login' %}" class="loginBtn">Login</a>
+        </div>
+      </div>
+      <div class="landing-content">
+        <h2>Jenga</h2>
+        <p>
+          Where construction dreams meet reality! Whether you're a homeowner
+          embarking on a renovation project or a contractor seeking exciting
+          opportunities, our platform is your one-stop destination.
+        </p>
+      </div>
+    </section>
     <div class="more">
       <h2>History of Jenga</h2>
       <p>
@@ -41,20 +58,57 @@
         tempora consectetur repellendus? Consequatur omnis officiis quas eum,
         reprehenderit perferendis eveniet.
       </p>
-      <div class="more-check">
-        <div class="more-img">
-            <img src="{% static 'images/logo.png' %}" alt="Logo" />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam minima
+        aliquid laborum modi cumque itaque odio sunt eaque dolorem perspiciatis
+        tempora nulla eos, ipsum ipsa, eligendi autem non quam exercitationem
+        repellat dignissimos vel? Ullam eligendi delectus nobis corrupti, quia
+        laboriosam quo inventore saepe et vel alias veniam quod libero corporis
+        cum sint velit eos! Aperiam, ipsum sequi fugit commodi, qui, fugiat cum
+        fuga veritatis in repellat illo maxime sed neque dignissimos labore
+        architecto temporibus similique accusamus consequatur id vel inventore
+        recusandae. Fuga, modi, ad velit quos amet maiores neque iusto quisquam
+        nesciunt commodi illo.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae iusto
+        est vero temporibus earum voluptatem consectetur illum molestiae quas
+        soluta. Cupiditate perferendis, fuga corporis optio cum beatae. Enim,
+        quod omnis.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rerum
+        nesciunt vitae in ratione delectus tenetur accusamus cum explicabo
+        consectetur saepe similique quibusdam asperiores provident veniam,
+        placeat quod magnam ut soluta modi quia. Ex corporis ullam
+        necessitatibus quos quae tenetur, pariatur perferendis minima ea quasi
+        vero quas maxime molestias est accusantium fugit tempora illo animi
+        porro culpa eos nulla voluptate. Necessitatibus culpa et corrupti
+        placeat unde odit eaque dicta nesciunt recusandae tempore aliquid sequi
+        qui, ab numquam facilis cupiditate nostrum minima, a perferendis vel
+        dolores velit, sit delectus. Id voluptas vel nihil officiis modi ipsa
+        deserunt pariatur odio soluta repellendus obcaecati iste veritatis ipsam
+        quam voluptate culpa dignissimos, dicta neque? Eveniet, dolorum
+        temporibus eos consequatur commodi illo numquam hic amet ad voluptate
+        eum error praesentium, dolor cupiditate ipsum debitis earum. Nemo iure
+        quis dolore.
+      </p>
+    </div>
+    <div class="row">
+      <div class="row-div">
+        <div class="imageWrapper">
+          <img src="{% static 'images/logo.png' %}" alt="Logo" />
         </div>
-        <div class="more-affirm">
-          <h3>At Jenga</h3>
+        <div class="textWrapper">
+          <span class="headerText">At Jenga</span>
           <p>
             We aim to simplify the entire construction process by bridging the
             gap between clients looking for construction services and
             contractors looking for exciting construction projects to embark in.
           </p>
+          <a href="#">Get Started</a>
         </div>
       </div>
     </div>
-    {% endblock content %}
   </body>
 </html>
