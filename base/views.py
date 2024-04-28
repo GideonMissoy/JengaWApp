@@ -68,7 +68,7 @@ class CreateProject(CreateView):
 class BidsTemplate(ListView):
     model = Bid
     context_object_name = 'bids'
-    template_name = 'base/bids.html'
+    template_name = 'base/project_detail.html'
 
 class ProjectBid(CreateView):
     model = Bid
@@ -84,8 +84,8 @@ class ProjectBid(CreateView):
     def get_success_url(self):
         return reverse_lazy('project_detail', kwargs={'pk': self.kwargs['pk']})
 
-class ContractorsTemplate(TemplateView):
-    template_name = 'base/contractors.html'
+# class ContractorsTemplate(TemplateView):
+#     template_name = 'base/contractors.html'
 
 class SuppliesTemplate(TemplateView):
     template_name = 'base/buy_supplies.html'

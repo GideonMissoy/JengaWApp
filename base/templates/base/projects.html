@@ -14,25 +14,34 @@
         <div class="search-bar">
           <input type="text" placeholder="Search..." />
         </div>
-        <button class="filter-button" onclick="filterProjects()">Filter Projects</button>
+        <button class="filter-button" onclick="filterProjects()">
+          Filter Projects
+        </button>
       </div>
     </div>
-    <div class="create-link"><a href="{% url 'project' %}">Create new Project</a></br></div>
-    <div>
+    <div class="create-link">
+      <a href="{% url 'project' %}">Create new Project</a>
+    </div>
+    <br />
+    <div class="project-container">
       {% for project in projects %}
-      <div class="project-container">
+      <div class="project1">
         <a href="{% url 'project_detail' project.pk %}">
           <div class="projectDetails">
             {% if project.image %}
             <img src="{{ project.image.url }}" alt="Project Image" />
             <div class="project-description">
-              <small>{{ project.created_at.date }}   |   {{ project.location }}</small>
+              <small
+                >{{ project.created_at.date }} | {{ project.location }}</small
+              >
               <h3>{{ project.title }}</h3>
               <p>{{ project.description }}</p>
             </div>
             {% else %}
             <div class="project-description">
-              <small>{{ project.created_at.date }}   |   {{ project.location }}</small>
+              <small
+                >{{ project.created_at.date }} | {{ project.location }}</small
+              >
               <h3>{{ project.title }}</h3>
               <p>{{ project.description }}</p>
             </div>

@@ -46,20 +46,26 @@
   padding: 10px 17px;
   border-radius: 1.5rem;
   text-decoration: none;
+  color: black;
 }
 
 .create-link a:hover {
   cursor: pointer;
-  background-color: rgb(195, 255, 235);
+  background-color: rgba(228, 228, 194, 0.685);
 }
 
 .project-container {
-  width: 60%;
+  width: 65%;
   margin: auto;
   overflow: hidden;
-  background-color: #e4e4e4;
-  padding: 5px 10px;
-  border-radius: 2.5rem;
+  padding: 12px 15px;
+}
+
+.project1 {
+  background-color: #f1f1f1;
+  padding: 15px 25px;
+  margin-bottom: 2.5%;
+  border-radius: 2rem;
 }
 
 .project-container a {
@@ -70,14 +76,14 @@
 .project-container :hover {
   background-color: #e4e4e4;
   padding: 6px 13px;
-  border: 5%;
+  border-radius: 1.77rem;
   cursor: pointer;
 }
 
 .projectDetails {
-  background-color: #e4e1e1;
-  margin-bottom: 12px;
-  border-radius: 5px;
+  /* background-color: #e4e1e1; */
+  margin-bottom: 5px;
+  border-radius: 1.25rem;
   padding: 10px;
 }
 
