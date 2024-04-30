@@ -65,6 +65,7 @@ class CreateProject(CreateView):
         return super(CreateProject, self).form_valid (form)
 
 
+
 class BidsTemplate(ListView):
     model = Bid
     context_object_name = 'bids'
